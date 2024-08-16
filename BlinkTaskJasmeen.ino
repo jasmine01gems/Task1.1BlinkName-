@@ -19,56 +19,56 @@ void loop() {
   }  
   
   if (sequenceIndex < strlen("JASMEeN")) {  
-  blinkMorseCode("JASMEeN"[sequenceIndex]);  
+  blinkMorseName("JASMEeN"[sequenceIndex]);  
   sequenceIndex++;  
   delay(400);  // to have 400ms delay between letters  
   }  
 }  
   
-void blinkMorseCode(char c) {  
+void blinkMorseName(char c) {  
   switch (c) {  
   case 'J':  
-  blinkDot();  
-  blinkDash();  
-  blinkDash();  
-  blinkDash();  
+  blinkMorseDot();  
+  blinkMorseDash();  
+  blinkMorseDash();  
+  blinkMorseDash(); 
   break;  
   case 'A':  
-  blinkDot();  
-  blinkDash();  
+  blinkMorseDot();    
+  blinkMorseDash(); 
   break;  
   case 'S':  
-  blinkDot();  
-  blinkDot();  
-  blinkDot();  
+  blinkMorseDot();    
+  blinkMorseDot();    
+  blinkMorseDot();    
   break;  
   case 'M':  
-  blinkDash();  
-  blinkDash();  
+  blinkMorseDash(); 
+  blinkMorseDash();  
   break;  
   case 'E':  
-  blinkDot();  
+  blinkMorseDot();    
   break;  
   case 'e':  
-  blinkDot();  
+  blinkMorseDot();    
   break;  
   case 'N':  
-  blinkDash();  
-  blinkDot();  
+  blinkMorseDash();  
+  blinkMorseDot();  ;  
   break;  
   default:  
   break;  
   }  
 }  
   
-void blinkDot() {  
+void blinkMorseDot() {  
   digitalWrite(ledPin, HIGH);  
   delay(100);  
   digitalWrite(ledPin, LOW);  
   delay(100);  
 }  
   
-void blinkDash() {  
+void blinkMorseDash() {  
   digitalWrite(ledPin, HIGH);  
   delay(300);  
   digitalWrite(ledPin, LOW);  
